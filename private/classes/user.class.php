@@ -3,19 +3,18 @@
 class User extends DatabaseObject {
 
 static protected $table_name = 'user';
-static protected $db_columns = ['userid', 'userName', 'password', 'firstName'];
+static protected $db_columns = ['userid', 'userName', 'password'];
 
 public $userid;
 public $userName;
 public $password;
-public $firstName;
+
 
 // construct method
 public function __construct($args=[]) {
   $this->userid = $args['userid'] ?? NULL;
   $this->userName = $args['userName'] ?? '';
   $this->password = $args['password'] ?? '';
-  $this->firstName = $args['firstName'] ?? '';
  }
 
  static public function find_by_username($userName, $password){
