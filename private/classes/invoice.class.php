@@ -18,7 +18,7 @@ public function __construct($args=[]) {
   $this->recieveDate = $args['recieveDate'] ?? '';
   $this->manufacturer = $args['manufacturer'] ?? '';
   $this->referenceNumber = $args['referenceNumber'] ?? '';
-  $this->amount = $args['Amount'] ?? '';
+  $this->amount = $args['amount'] ?? '';
  
   
 }
