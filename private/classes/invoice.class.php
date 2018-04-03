@@ -3,12 +3,12 @@
 class Invoice extends DatabaseObject {
 
 static protected $table_name = 'invoice';
-static protected $db_columns = ['invoiceid', 'recieveDate', 'manufacturer', 'referenceNumber', 'amount'];
+static protected $db_columns = ['invoiceid', 'recieveDate', 'manufacturer', 'referenceNum', 'amount'];
 
 public $invoiceid;
 public $recieveDate;
 public $manufacturer;
-public $referenceNumber;
+public $referenceNum;
 public $amount;
 
 
@@ -17,7 +17,7 @@ public function __construct($args=[]) {
   $this->invoiceid = $args['invoiceid'] ?? NULL;
   $this->recieveDate = $args['recieveDate'] ?? '';
   $this->manufacturer = $args['manufacturer'] ?? '';
-  $this->referenceNumber = $args['referenceNumber'] ?? '';
+  $this->referenceNumber = $args['referenceNum'] ?? '';
   $this->amount = $args['amount'] ?? '';
  
   
