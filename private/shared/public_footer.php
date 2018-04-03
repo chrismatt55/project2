@@ -1,7 +1,7 @@
 <?php
 
 echo"    <footer>
-      <p>Blog Manager, Copyright &copy; " . date("Y") . "</p>
+      <p>Invoices and Cogs Manager, Copyright &copy; " . date("Y") . "</p>
     </footer>
   </body>
 </html>";
