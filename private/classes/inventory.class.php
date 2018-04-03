@@ -12,17 +12,15 @@ public $inventoryamt
 
 // construct method
 public function __construct($args=[]) {
-  $this->contractid = $args['contractid'] ?? NULL;
-  $this->paymentDate = $args['paymentDate'] ?? '';
-  $this->contractLength = $args['contractLength'] ?? '';
-  $this->paymentAmt = $args['paymentAmt'] ?? '';
-  $this->blogid = $args['blogid'] ?? '';
+  $this->inventoryid = $args['inventoryid'] ?? NULL;
+  $this->inventoryamt = $args['inventoryamt'] ?? '';
+  
 }
 
 // remember to return out a value since this is a function.
-static public function find_contract($id) {
-		$sql = "SELECT * FROM contract";
-		$sql .= " Where blogid='" . $id . "'";
+static public function find_inventory($id) {
+		$sql = "SELECT * FROM inventory";
+		$sql .= " Where inventoryid='" . $id . "'";
 		return static::find_by_sql($sql);
 	}
 
