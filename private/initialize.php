@@ -29,8 +29,9 @@
   // -> Individually
   require_once('classes/databaseobject.class.php');
   require_once('classes/user.class.php');
-  require_once('classes/blog.class.php');
-  require_once('classes/contract.class.php');
+  require_once('classes/cogs.class.php');
+  require_once('classes/inventory.class.php');
+  require_once('classes/invoice.class.php');
   require_once('classes/session.class.php');
 
 

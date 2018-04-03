@@ -3,15 +3,15 @@
 
 require_once("../../private/initialize.php");
 require_login();
-$page_title = "Update Contract";
-$current = "update";
+$page_title = "Update Inventory";
+$current = "inventory";
 include(SHARED_PATH . '/public_header.php');
 
 //get the persons id - id
-$contractid = $_GET['contractid'] ?? false;
+$inventoryid = $_GET['inventoryid'] ?? false;
 
 // find the user info based on passed id
-$contract = Contract::find_by_id($contractid);
+$inventory = Inventory::find_by_id($contractid);
 
 // set new variables to
 $paymentDate = $contract->paymentDate;
