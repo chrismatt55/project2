@@ -1,8 +1,8 @@
 <?php
 require_once("../../private/initialize.php");
 require_login();
-$page_title = "Blog Page";
-$current = "blog";
+$page_title = "Invoices";
+$current = "invoice";
 include(SHARED_PATH . '/public_header.php');
 ?>
 
@@ -10,19 +10,17 @@ include(SHARED_PATH . '/public_header.php');
       <div class="container">
 
          <br>
-         <h2>Blogs</h2>
-<button type="button" onclick="location= 'create.php'">Create a Blog</button>
+         <h2>Invoices</h2>
+<button type="button" onclick="location= 'create.php'">Add an Invoice</button>
 <br /><br />
          <table>
             <tr>
-              <th>Blog Names</th>
-              <th>URL</th>
-              <th>Email</th>
-              <th>Contact Name</th>
-              <th>Quality Score</th>
-              <th>Detail</th>
-              <th>Update</th>
-              <th>Delete</th>
+              <th>Reference Number</th>
+              <th>Manufacturer</th>
+              <th>Date Recieved</th>
+              <th>Amount</th>
+              <th>Submit</th>
+              <th>Reset</th>
 
             </tr>
 
@@ -30,18 +28,17 @@ include(SHARED_PATH . '/public_header.php');
 
 <?php
 
-      $blogs = Blog::find_all();
+      $invoices = Invoice::find_all();
       //echo var_dump($taxs);
-      foreach($blogs as $blog)
+      foreach($invoices as $invoice)
       {
-      echo "<tr><td>" .  $blog->blogName . "</td>";
-      echo "<td><a href='http://" .  $blog->url . "' target='blank'>" . $blog->url . "</a></td>";
-      echo "<td>" . $blog->email . "</td>";
-      echo "<td>" . $blog->contactFName . " " . $blog->contactLName .  "</td>";
-      echo "<td>" . $blog->qualityScore . "</td>";
-      echo "<td><a href='../contracts/index.php?blogid=" . $blog->blogid . "'>Detail</a></td>";
-      echo "<td><a href='update.php?blogid=" . $blog->blogid . "'>Update</a></td>";
-      echo "<td><a href='delete.php?blogid=" . $blog->blogid . "'>Delete</a></td>";
+      echo "<tr><td>" .  $invoice->referenceNum . "</td>";
+      echo "<td><a href='http://" .  $invoice->manufacturer . "' target='blank'>" . $blog->manufacturer . "</a></td>";
+      echo "<td>" . $blog->dateRec . "</td>";
+      echo "<td>" . $blog->Amount . " " . $blog->contactLName .  "</td>";
+     
+      echo "<td><a href='update.php?blogid=" . $blog->blogid . "'>Submit</a></td>";
+      echo "<td><a href='delete.php?blogid=" . $blog->blogid . "'>Reset</a></td>";
 
 
       }
