@@ -1,15 +1,13 @@
 <?php
 
-class Contract extends DatabaseObject {
+class Inventory extends DatabaseObject {
 
-static protected $table_name = 'contract';
-static protected $db_columns = ['contractid', 'paymentDate', 'contractLength', 'paymentAmt', 'blogid'];
+static protected $table_name = 'inventory';
+static protected $db_columns = ['inventoryid', 'inventoryamt'];
 
-public $contractid;
-public $paymentDate;
-public $contractLength;
-public $paymentAmt;
-public $blogid;
+public $inventoryid;
+public $inventoryamt
+
 
 
 // construct method
