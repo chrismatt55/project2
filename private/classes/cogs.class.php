@@ -12,11 +12,10 @@ public $amt
 
 // construct method
 public function __construct($args=[]) {
-  $this->invoiceid = $args['invoiceid'] ?? NULL;
-  $this->recieveDate = $args['recieveDate'] ?? '';
-  $this->manufacturer = $args['manufacturer'] ?? '';
-  $this->referenceNumber = $args['referenceNumber'] ?? '';
-  $this->amount = $args['Amount'] ?? '';
+  $this->cogsid = $args['cogsid'] ?? NULL;
+  $this->date = $args['date'] ?? '';
+  $this->amt = $args['amt'] ?? '';
+  
  
   
 }
