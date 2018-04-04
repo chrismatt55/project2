@@ -6,10 +6,10 @@ static protected $table_name = 'invoice';
 static protected $db_columns = ['invoiceid', 'receiveDate', 'manufacturer', 'referenceNum', 'amt'];
 
 public $invoiceid;
-public $recieveDate;
+public $receiveDate;
 public $manufacturer;
 public $referenceNum;
-public $amount;
+public $amt;
 
 
 // construct method
