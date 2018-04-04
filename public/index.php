@@ -25,7 +25,7 @@ if(is_post_request()){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Invoice and COGS Calculator | Login Page</title>
+    <title>Invoice and COGS Manager | Login Page</title>
     <link rel="stylesheet" href="stylesheets/styles.css?modified=211009">
   </head>
 
@@ -33,7 +33,7 @@ if(is_post_request()){
     <header>
       <div class="container">
         <div id="branding">
-          <h1><span class= "highlight">Invoice</span> and</span> COGS</span> Calculator</h1>
+          <h1><span class= "highlight">Invoice and COGS</span> Manager</h1>
         </div>
         <nav>
           

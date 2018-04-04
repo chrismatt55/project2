@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Invoices and Cogs Manager | <?php echo $page_title; //gets the $page_title from the page and puts it here ?></title>
+    <title>Invoice and COGS Manager | <?php echo $page_title; //gets the $page_title from the page and puts it here ?></title>
     <link rel="stylesheet" href="http://sofab1.com/lm_2018/public/stylesheets/styles.css?modified=20012009">
     <style>
     .owe {color: red; }
@@ -15,7 +15,7 @@
     <header>
       <div class="container">
         <div id="branding">
-          <h1><span class="highlight">Invoices</span> Cogs</h1>
+          <h1><span class="highlight">Invoice and COGS</span> Manager</h1>
         </div>
         <nav>
           <ul>

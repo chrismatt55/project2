@@ -12,7 +12,7 @@ include(SHARED_PATH . '/public_header.php');
    <div class="container">
 
      <br>
-     <h2>Welcome to the Invoice and COGS Calculator</h2>
+     <h2>Welcome to the Invoice and COGS Manager</h2>
 
 
    </div>
