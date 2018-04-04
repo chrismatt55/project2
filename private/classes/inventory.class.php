@@ -6,7 +6,7 @@ static protected $table_name = 'inventory';
 static protected $db_columns = ['inventoryid', 'inventoryamt'];
 
 public $inventoryid;
-public $inventoryamt
+public $inventoryamt;
 
 
 
