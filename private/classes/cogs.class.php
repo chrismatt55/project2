@@ -7,7 +7,7 @@ static protected $db_columns = ['cogsid', 'date', 'amt'];
 
 public $cogsid;
 public $date;
-public $amt
+public $amt;
 
 
 // construct method
@@ -21,7 +21,7 @@ public function __construct($args=[]) {
 }
 
 
-
+}
 
 
 
