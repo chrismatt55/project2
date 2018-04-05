@@ -28,20 +28,22 @@ $inventory = Inventory::find_by_id($inventoryid);
               
                </tr>
 
-               <?php
-               $inventory = Inventory::find_inventory($inventoryid);
+ <?php
 
-               foreach($inventory as $inventory)
+      $inventory = Inventory::find_all();
+      //echo var_dump($taxs);
+      foreach($inventory as $inventory)
+      {
+      echo "<tr><td>" .  $inventory->inventoryamt . "</td>";
+      echo "<td><a href='http://" .  $inventory->inventoryamt . "' target='blank'>" . $inventory->inventoryamt . "</a></td>";
+      echo "<td>" . $inventory->inventoryamt . "</td>";
+      echo "<td>" . $inventory->inventoryamt . " " . $inventory->inventoryamt .  "</td>";
+     
+      echo "<td><a href='update.php?invoiceid=" . $inventory->inventoryamt . "'>Submit</a></td>";
+      echo "<td><a href='delete.php?invoiceid=" . $inventory->inventoryid . "'>Reset</a></td>";
 
-               {
-                 echo "<tr><td>" . $inventory->inventoryamt . "</td>";
-                 
-                 
-                 echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryid . "'>Update</a></td>";
-                
 
-
-               }
+      }
 
 ?>
 </table>
