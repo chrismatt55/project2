@@ -17,10 +17,7 @@ $inventory = Inventory::find_by_id($inventoryid);
          <br>
          <h2>Inventory Report</h2>
          
-           <p>
-             <?php echo "Inventory Amount: " . $inventory->inventoryamt; ?>
-           </p>
-      
+          
 
         
 
@@ -40,7 +37,7 @@ $inventory = Inventory::find_by_id($inventoryid);
                  echo "<tr><td>" . $inventory->inventoryamt . "</td>";
                  
                  
-                 echo "<td><a href='update.php?contractid=" . $contract->contractid . "'>Update</a></td>";
+                 echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryid . "'>Update</a></td>";
                 
 
 
