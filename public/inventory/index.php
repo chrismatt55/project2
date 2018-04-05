@@ -1,13 +1,13 @@
 <?php
 require_once("../../private/initialize.php");
 require_login();
-$page_title = "Blog Detail Page";
-$current = "blog";
+$page_title = "Inventory";
+$current = "inventory";
 include(SHARED_PATH . '/public_header.php');
 
-$blogid = $_GET['blogid'] ?? false;
+$inventoryid = $_GET['inventoryid'] ?? false;
 
-$blog = Blog::find_by_id($blogid);
+$inventory = Inventory::find_by_id($inventoryid);
 
 ?>
 
@@ -15,39 +15,33 @@ $blog = Blog::find_by_id($blogid);
       <div class="container">
 
          <br>
-         <h2>Blogs</h2>
-         <p>
-           <?php echo "Blog Name: " . $blog->blogName; ?>
+         <h2>Inventory Report</h2>
+         
            <p>
-             <?php echo "Quality Score: " . $blog->qualityScore; ?>
+             <?php echo "Inventory Amount: " . $inventory->inventoryamt; ?>
            </p>
-           <p>
-             <?php echo "Email: " . $blog->email; ?>
-           </p>
+      
 
-           <button type="button" onclick="location='create.php?blogid=<?php echo $blogid; ?>'"> Add a contract Button </button>
-             <br /><br />
+        
 
              <table>
                <tr>
-                 <th>Payment Date</th>
-                 <th>Payment Amount</th>
-                 <th>Contract Length</th>
+                 <th>Inventory Amount</th>
                  <th>Update</th>
-                 <th>Delete</th>
+              
                </tr>
 
                <?php
-               $contracts = Contract::find_contract($blogid);
+               $inventory = Inventory::find_inventory($inventoryid);
 
-               foreach($contracts as $contract)
+               foreach($inventory as $inventory)
 
                {
-                 echo "<tr><td>" . $contract->paymentDate . "</td>";
-                 echo "<td>" . $contract->paymentAmt . "</td>";
-                 echo "<td>" . $contract->contractLength . "</td>";
+                 echo "<tr><td>" . $inventory->inventoryamt . "</td>";
+                 
+                 
                  echo "<td><a href='update.php?contractid=" . $contract->contractid . "'>Update</a></td>";
-                 echo "<tr><a href='delete.php?contractid=" . $contract->contractid . "'>Delete</a></td></tr>";
+                
 
 
                }
