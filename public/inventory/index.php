@@ -39,8 +39,8 @@ $inventory = Inventory::find_by_id($inventoryid);
       echo "<td>" . $inventory->inventoryamt . "</td>";
       echo "<td>" . $inventory->inventoryamt . " " . $inventory->inventoryamt .  "</td>";
      
-      echo "<td><a href='update.php?invoiceid=" . $inventory->inventoryamt . "'>Submit</a></td>";
-      echo "<td><a href='delete.php?invoiceid=" . $inventory->inventoryid . "'>Reset</a></td>";
+      echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryamt . "'>Submit</a></td>";
+     
 
 
       }
