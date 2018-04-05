@@ -17,10 +17,7 @@ $inventory = Inventory::find_by_id($inventoryid);
          <br>
          <h2>Inventory Report</h2>
          
-           <p>
-             <?php echo "Inventory Amount: " . $inventory->inventoryamt; ?>
-           </p>
-      
+          
 
         
 
