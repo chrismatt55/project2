@@ -33,12 +33,12 @@ include(SHARED_PATH . '/public_header.php');
       foreach($invoices as $invoice)
       {
       echo "<tr><td>" .  $invoice->referenceNum . "</td>";
-      echo "<td><a href='http://" .  $invoice->manufacturer . "' target='blank'>" . $blog->manufacturer . "</a></td>";
-      echo "<td>" . $blog->dateRec . "</td>";
-      echo "<td>" . $blog->Amount . " " . $blog->contactLName .  "</td>";
+      echo "<td><a href='http://" .  $invoice->manufacturer . "' target='blank'>" . $invoice->manufacturer . "</a></td>";
+      echo "<td>" . $invoice->receiveDate . "</td>";
+      echo "<td>" . $invoice->amt . " " . $invoice->amt .  "</td>";
      
-      echo "<td><a href='update.php?blogid=" . $blog->blogid . "'>Submit</a></td>";
-      echo "<td><a href='delete.php?blogid=" . $blog->blogid . "'>Reset</a></td>";
+      echo "<td><a href='update.php?invoiceid=" . $invoice->invoiceid . "'>Submit</a></td>";
+      echo "<td><a href='delete.php?invoiceid=" . $invoice->invoiceid . "'>Reset</a></td>";
 
 
       }
