@@ -1,0 +1,7 @@
+[04-Apr-2018 15:57:20 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in /home/alexisy0/public_html/project2/private/classes/cogs.class.php on line 14
+[04-Apr-2018 16:02:27 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in /home/alexisy0/public_html/project2/private/classes/cogs.class.php on line 14
+[04-Apr-2018 16:03:08 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in /home/alexisy0/public_html/project2/private/classes/cogs.class.php on line 14
+[04-Apr-2018 16:03:13 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in /home/alexisy0/public_html/project2/private/classes/cogs.class.php on line 14
+[04-Apr-2018 16:03:55 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in /home/alexisy0/public_html/project2/private/classes/cogs.class.php on line 14
+[04-Apr-2018 16:06:06 CST6CDT] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/alexisy0/public_html/project2/private/classes/cogs.class.php on line 28
+[04-Apr-2018 16:06:57 CST6CDT] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/alexisy0/public_html/project2/private/classes/invoice.class.php on line 31
