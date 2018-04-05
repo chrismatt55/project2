@@ -28,7 +28,7 @@ $inventoryamt = $inventory->inventoryamt;
 if(is_post_request()) {
     // get post variables
 
-    $inventoryid = $_POST['inventoryid'];
+
     $inventoryamt = $_POST['inventoryamt'];
    
 
