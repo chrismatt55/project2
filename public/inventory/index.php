@@ -40,7 +40,7 @@ $inventory = Inventory::find_by_id($inventoryid);
                  echo "<tr><td>" . $inventory->inventoryamt . "</td>";
                  
                  
-                 echo "<td><a href='update.php?contractid=" . $contract->contractid . "'>Update</a></td>";
+                 echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryid . "'>Update</a></td>";
                 
 
 
