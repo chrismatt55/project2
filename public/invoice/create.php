@@ -30,7 +30,7 @@ if(is_post_request()) {
 
     //instantiate a new object and use the save function to create.
     $invoice = new Invoice($args);
-    $invoice->save();
+    $invoice->create();
 
     //after saving redirect back to home page.
     header('Location: index.php');

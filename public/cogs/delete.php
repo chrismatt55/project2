@@ -39,7 +39,7 @@ if(is_post_request()) {
       <div class="container">
           <form action="delete.php" method="post">
             <fieldset>
-              <legend>Are you sure you want to delete <?php echo $cogs;?> ?</legend>
+              <legend>Are you sure you want to delete <?php echo $cogsid;?> ?</legend>
               <input name="cogsid" type="hidden" value="<?php echo $cogsid;?>">
               <button type="submit" value="Submit">Yes, Please Delete</button>
               <button type="button" onclick="location='index.php'">No, Don't Delete</button>

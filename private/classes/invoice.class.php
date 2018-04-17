@@ -15,16 +15,22 @@ public $amt;
 // construct method
 public function __construct($args=[]) {
   $this->invoiceid = $args['invoiceid'] ?? NULL;
-  $this->recieveDate = $args['receiveDate'] ?? '';
+  $this->receiveDate = $args['receiveDate'] ?? '';
   $this->manufacturer = $args['manufacturer'] ?? '';
-  $this->referenceNumber = $args['referenceNum'] ?? '';
-  $this->amount = $args['amt'] ?? '';
+  $this->referenceNum = $args['referenceNum'] ?? '';
+  $this->amt = $args['amt'] ?? '';
  
+ }
+ static public function find_invoice($id) {
+		$sql = "SELECT * FROM invoice";
+		$sql .= " Where invoiceid='" . $id . "'";
+		return static::find_by_sql($sql);
+	}
   
 }
 
 
-}
+
 
 
 

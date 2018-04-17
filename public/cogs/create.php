@@ -45,8 +45,8 @@ if(is_post_request()) {
                               <p>Date: <input type="date" name="date"></p>
                               <p>Amount: <input type="number" name="amt"></p>
 
-                              <button type="update" value="Update">Update</button>
-                              <button type="delete" value="Delete">Delete</button>
+                              <button type="submit" value="Submit">Submit</button>
+                              <button type="reset" value="Reset">Reset</button>
                             </fieldset>
                           </form>
 

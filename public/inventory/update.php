@@ -8,10 +8,10 @@ $current = "update";
 include(SHARED_PATH . '/public_header.php');
 
 //get the persons id - id
-$invoiceid = $_GET['inventoryid'] ?? false;
+$inventoryid = $_GET['inventoryid'] ?? false;
 
 // find the user info based on passed id
-$invoice = Inventory::find_by_id($inventoryid);
+$inventory = Inventory::find_by_id($inventoryid);
 
 // set new variables to
 
