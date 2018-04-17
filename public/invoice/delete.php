@@ -1,31 +1,31 @@
 <?php
 require_once("../../private/initialize.php");
 require_login();
-$page_title = "Delete Blog";
+$page_title = "Reset Invoice";
 $current = "delete";
 include(SHARED_PATH . '/public_header.php');
 
 // if form has been submitted get variables and calculate numbers then
 // set them to the array.
-$blogid = $_GET['blogid'];
+$invoiceid = $_GET['invoiceid'];
 
 // find the user info based on passed id
-$blog = Blog::find_by_id($blogid);
+$invoice = Invoice::find_by_id($invoiceid);
 
 // set new variables to
-$blogName = $blog->blogName;
+$referenceNum  = $invoice->referenceNum;
 
 if(is_post_request()) {
     //get id from form
-    $blogid = $_POST['blogid'];
+    $invoiceid = $_POST['invoiceid'];
 
     //send array back to construct
     $args = [];
-    $args['blogid'] = $blogid;
+    $args['invoiceid'] = $invoiceid;
 
     //instantiate and call delete function.
-    $blog = new Blog($args);
-    $blog->delete($blogid);
+    $invoice = new Invoice($args);
+    $invoice->delete($invoiceid);
 
 
     //after saving redirect back to home page.
@@ -39,8 +39,8 @@ if(is_post_request()) {
       <div class="container">
           <form action="delete.php" method="post">
             <fieldset>
-              <legend>Are you sure you want to delete <?php echo $blogName;?> ?</legend>
-              <input name="blogid" type="hidden" value="<?php echo $blogid;?>">
+              <legend>Are you sure you want to delete <?php echo $referenceNum;?> ?</legend>
+              <input name="invoiceid" type="hidden" value="<?php echo $invoiceid;?>">
               <button type="submit" value="Submit">Yes, Please Delete</button>
               <button type="button" onclick="location='index.php'">No, Don't Delete</button>
             </fieldset>

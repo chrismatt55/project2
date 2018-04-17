@@ -19,8 +19,8 @@ include(SHARED_PATH . '/public_header.php');
               <th>Manufacturer</th>
               <th>Date Recieved</th>
               <th>Amount</th>
-              <th>Submit</th>
-              <th>Reset</th>
+              <th>Update</th>
+              <th>Delete</th>
 
             </tr>
 
@@ -33,12 +33,12 @@ include(SHARED_PATH . '/public_header.php');
       foreach($invoices as $invoice)
       {
       echo "<tr><td>" .  $invoice->referenceNum . "</td>";
-      echo "<td><a href='http://" .  $invoice->manufacturer . "' target='blank'>" . $invoice->manufacturer . "</a></td>";
+      echo "<td>" .  $invoice->manufacturer .  "</td>";
       echo "<td>" . $invoice->receiveDate . "</td>";
-      echo "<td>" . $invoice->amt . " " . $invoice->amt .  "</td>";
+      echo "<td>" . $invoice->amt . "</td>";
      
-      echo "<td><a href='update.php?invoiceid=" . $invoice->invoiceid . "'>Submit</a></td>";
-      echo "<td><a href='delete.php?invoiceid=" . $invoice->invoiceid . "'>Reset</a></td>";
+      echo "<td><a href='update.php?invoiceid=" . $invoice->invoiceid . "'>Update</a></td>";
+      echo "<td><a href='delete.php?invoiceid=" . $invoice->invoiceid . "'>Delete</a></td>";
 
 
       }
