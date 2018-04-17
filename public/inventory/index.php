@@ -32,7 +32,7 @@ $inventory = Inventory::find_by_id($inventoryid);
 
       $inventory = Inventory::find_all();
       //echo var_dump($taxs);
-      foreach($inventory as $inventory)
+      foreach($inventories as $inventory)
       {
       echo "<tr><td>" .  $inventory->inventoryamt . "</td>";
       echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryamt . "'>Update</a></td>";

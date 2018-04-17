@@ -20,6 +20,11 @@ public function __construct($args=[]) {
   
 }
 
+static public function find_cogs($id) {
+		$sql = "SELECT * FROM cogs";
+		$sql .= " Where cogsid='" . $id . "'";
+		return static::find_by_sql($sql);
+	}
 
 }
 
