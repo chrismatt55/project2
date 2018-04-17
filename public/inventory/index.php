@@ -35,8 +35,6 @@ $inventory = Inventory::find_by_id($inventoryid);
       foreach($inventory as $inventory)
       {
       echo "<tr><td>" .  $inventory->inventoryamt . "</td>";
-   
-     
       echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryamt . "'>Update</a></td>";
      
 
