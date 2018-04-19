@@ -29,7 +29,7 @@ include(SHARED_PATH . '/public_header.php');
 
       $cogs = Cogs::find_all();
       //echo var_dump($taxs);
-      foreach($cogs as $cog)
+      foreach($cogs as $cogs)
       {
       echo "<tr><td>" .  $cogs->date . "</td>";
       echo "<td>" . $cogs->amount . "</td>";
