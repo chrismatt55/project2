@@ -32,7 +32,7 @@ include(SHARED_PATH . '/public_header.php');
       foreach($cogs as $cog)
       {
       echo "<tr><td>" .  $cogs->date . "</td>";
-      echo "<td>" . $cogs->amt . "</td>";
+      echo "<td>" . $cogs->amount . "</td>";
 
      
       echo "<td><a href='update.php?cogsid=" . $cogs->cogsid . "'>Update</a></td>";

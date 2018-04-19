@@ -17,7 +17,7 @@ $cogs = Cogs::find_by_id($cogsid);
 
 
 $date = $cogs->date;
-$amt = $cogs->amt;
+$amount = $cogs->amount;
 
 
 
@@ -31,7 +31,7 @@ if(is_post_request()) {
 
     $cogsid = $_POST['cogsid'];
     $date = $_POST['date'];
-    $amt = $_POST['amt'];
+    $amount = $_POST['amount'];
 
 
 
@@ -39,7 +39,7 @@ if(is_post_request()) {
     $args = [];
     $args['id'] = $id;
     $args['date'] = $date;
-    $args['amt'] = $amt;
+    $args['amount'] = $amount;
 
 
 
@@ -63,7 +63,7 @@ if(is_post_request()) {
               <legend>Updated Cogs Information</legend>
               <input name="cogsid" type="hidden" value="<?php echo $cogsid;?>">
               <p>Date: <input type="date" name="date" value="<?php echo $date; ?>"></p>
-              <p>Amount: <input type="number" name="amt"  value="<?php echo $amt; ?>"></p>
+              <p>Amount: <input type="number" name="amount"  value="<?php echo $amount; ?>"></p>
             
 
 

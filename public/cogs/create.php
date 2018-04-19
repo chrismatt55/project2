@@ -12,7 +12,7 @@ if(is_post_request()) {
     // get post variables
 
     $date = $_POST['date'];
-    $amt = $_POST['amt'];
+    $amount = $_POST['amount'];
 
 
     //create an array called args to be used with __construct
@@ -20,7 +20,7 @@ if(is_post_request()) {
     $args = [];
 
     $args['date'] = $date;
-    $args['amt'] = $amt;
+    $args['amount'] = $amount;
    
 
 
@@ -43,7 +43,7 @@ if(is_post_request()) {
                             <fieldset>
                               <legend>Add a Monthly Cogs</legend>
                               <p>Date: <input type="date" name="date"></p>
-                              <p>Amount: <input type="number" name="amt"></p>
+                              <p>Amount: <input type="number" name="amount"></p>
 
                               <button type="submit" value="Submit">Submit</button>
                               <button type="reset" value="Reset">Reset</button>
