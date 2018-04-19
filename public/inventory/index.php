@@ -11,7 +11,7 @@ include(SHARED_PATH . '/public_header.php');
 
          <br>
          <h2>Inventory</h2>
-<button type="button" onclick="location= 'create.php'">Add Inventory</button>
+
 <br /><br />
          <table>
             <tr>

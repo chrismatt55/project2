@@ -44,7 +44,7 @@ if(is_post_request()) {
                               <legend>Add Inventory</legend>
                              
                              
-                              <p>Amount: <input type="number" name="amt"></p>
+                              <p>Amount: <input type="number" name="inventoryamt"></p>
 
                               <button type="update" value="Update">Update</button>
                            
