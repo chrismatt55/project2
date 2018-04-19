@@ -16,8 +16,8 @@ $inventory = Inventory::find_by_id($inventoryid);
 // set new variables to
 
 
-$inventoryamt = $inventory->inventoryamt;
 
+$amt = $invoice->amt;
 
 
 
@@ -28,16 +28,15 @@ $inventoryamt = $inventory->inventoryamt;
 if(is_post_request()) {
     // get post variables
 
+    $inventoryid = $_POST['inventoryid'];
+    $amt = $_POST['amt'];
 
-    $inventoryamt = $_POST['inventoryamt'];
-   
 
 
   //create an array called args to be used with __construct
     $args = [];
     $args['id'] = $id;
-    $args['inventoryamt'] = $inventoryamt;
-  
+    $args['amt'] = $amt;
 
 
 
@@ -57,10 +56,11 @@ if(is_post_request()) {
       <div class="container">
           <form action="update.php" method="post">
             <fieldset>
-              <legend>Updated Inventory Amount</legend>
+              <legend>Update Inventory</legend>
               <input name="inventoryid" type="hidden" value="<?php echo $inventoryid;?>">
-              <p>Inventory Amount: <input type="number" name="inventoryamt" value="<?php echo $inventoryamt; ?>"></p>
-          
+             
+              <p>Amount: <input type="number" name="amt"  value="<?php echo $amt; ?>"></p>
+             
 
 
 
