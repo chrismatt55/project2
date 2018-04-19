@@ -8,7 +8,7 @@ $current = "update";
 include(SHARED_PATH . '/public_header.php');
 
 //get the persons id - id
-$inventoryid = $_GET['inventoryid'] ?? false;
+$inventoryid = $_GET['inventory'] ?? false;
 
 // find the user info based on passed id
 $inventory = Inventory::find_by_id($inventoryid);
@@ -17,7 +17,7 @@ $inventory = Inventory::find_by_id($inventoryid);
 
 
 
-$amt = $invoice->amt;
+$inventoryamt = $inventory->inventoryamt;
 
 
 
@@ -29,14 +29,15 @@ if(is_post_request()) {
     // get post variables
 
     $inventoryid = $_POST['inventoryid'];
-    $amt = $_POST['amt'];
+    $inventoryamt = $_POST['inventoryamt'];
+  
 
 
 
   //create an array called args to be used with __construct
     $args = [];
     $args['id'] = $id;
-    $args['amt'] = $amt;
+    $args['inventoryamt'] = $inventoryamt;
 
 
 
@@ -56,10 +57,10 @@ if(is_post_request()) {
       <div class="container">
           <form action="update.php" method="post">
             <fieldset>
-              <legend>Update Inventory</legend>
+              <legend>Updated Inventory Information</legend>
               <input name="inventoryid" type="hidden" value="<?php echo $inventoryid;?>">
-             
-              <p>Amount: <input type="number" name="amt"  value="<?php echo $amt; ?>"></p>
+           
+              <p>Inventory Amount: <input type="number" name="amt"  value="<?php echo $inventoryamt; ?>"></p>
              
 
 

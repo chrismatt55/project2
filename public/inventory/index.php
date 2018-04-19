@@ -11,14 +11,14 @@ include(SHARED_PATH . '/public_header.php');
 
          <br>
          <h2>Inventory</h2>
-
+<button type="button" onclick="location= 'create.php'">Add Inventory</button>
 <br /><br />
          <table>
             <tr>
-              
+             
               <th>Inventory Amount</th>
               <th>Update</th>
-              
+        
 
             </tr>
 
@@ -26,16 +26,15 @@ include(SHARED_PATH . '/public_header.php');
 
 <?php
 
-      $invoices = Inventory::find_all();
+      $inventory = Inventory::find_all();
       //echo var_dump($taxs);
-      foreach($inventories as $inventory)
+      foreach($inventory as $inventory)
       {
       echo "<tr><td>" .  $inventory->inventoryamt . "</td>";
      
-      
      
-   
-      echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryid . "'>Update</a></td>";
+      echo "<td><a href='update.php?invoiceid=" . $Inventory->inventoryid . "'>Update</a></td>";
+      
 
 
       }
