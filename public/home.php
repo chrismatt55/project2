@@ -14,7 +14,7 @@ include(SHARED_PATH . '/public_header.php');
      <br>
 
      <h2>Welcome to the Invoice and COGS Manager</h2>
-     <br><?php echo "We are trying to keep our inventory at " . $inventory->inventoryamt; ?><br>
+     <br>We are trying to keep our inventory at $300,000.00<br>
      <br>You have $0.00 left to spend this month<br>
 
 
