@@ -33,7 +33,7 @@ include(SHARED_PATH . '/public_header.php');
       echo "<tr><td>" .  $inventory->inventoryamt . "</td>";
      
      
-      echo "<td><a href='update.php?invoiceid=" . $Inventory->inventoryid . "'>Update</a></td>";
+      echo "<td><a href='update.php?inventoryid=" . $inventory->inventoryid . "'>Update</a></td>";
       
 
 

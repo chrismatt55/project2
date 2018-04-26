@@ -8,7 +8,7 @@ $current = "update";
 include(SHARED_PATH . '/public_header.php');
 
 //get the persons id - id
-$inventoryid = $_GET['inventory'] ?? false;
+$inventoryid = $_GET['inventoryid'] ?? false;
 
 // find the user info based on passed id
 $inventory = Inventory::find_by_id($inventoryid);
@@ -60,7 +60,7 @@ if(is_post_request()) {
               <legend>Updated Inventory Information</legend>
               <input name="inventoryid" type="hidden" value="<?php echo $inventoryid;?>">
            
-              <p>Inventory Amount: <input type="number" name="amt"  value="<?php echo $inventoryamt; ?>"></p>
+              <p>Inventory Amount: <input type="number" name="inventoryamt"  value="<?php echo $inventoryamt; ?>"></p>
              
 
 
