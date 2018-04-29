@@ -18,7 +18,7 @@ public function __construct($args=[]) {
 }
 
 // remember to return out a value since this is a function.
-static public function find_inventory($id) {
+static public function find_all_inventory($id) {
 		$sql = "SELECT * FROM inventory";
 		$sql .= " Where inventoryid='" . $id . "'";
 		return static::find_by_sql($sql);

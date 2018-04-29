@@ -7,6 +7,9 @@ require_once("../private/initialize.php");
 
 if(is_post_request()){
     
+    $inventory = new Inventory($args);
+    $inventory->save();
+
     $userName = $_POST['userName'];
     $password = $_POST['password'];
    

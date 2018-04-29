@@ -13,7 +13,7 @@ $cogsid = $_GET['cogsid'];
 $cogs = Cogs::find_by_id($cogsid);
 
 // set new variables to
-$cogs = $cogs->cogsid;
+$date = $cogs->date;
 
 if(is_post_request()) {
     //get id from form
@@ -39,7 +39,7 @@ if(is_post_request()) {
       <div class="container">
           <form action="delete.php" method="post">
             <fieldset>
-              <legend>Are you sure you want to delete <?php echo $date;?> ?</legend>
+              <legend>Are you sure you want to delete the monthly Cogs?</legend>
               <input name="cogsid" type="hidden" value="<?php echo $cogsid;?>">
               <button type="submit" value="Submit">Yes, Please Delete</button>
               <button type="button" onclick="location='index.php'">No, Don't Delete</button>

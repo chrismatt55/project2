@@ -21,14 +21,13 @@ include(SHARED_PATH . '/public_header.php');
         
 
             </tr>
-
-
-
 <?php
 
       $inventory = Inventory::find_all();
+
       //echo var_dump($taxs);
-      foreach($inventory as $inventory)
+    
+        foreach($inventory as $inventory)
       {
       echo "<tr><td>" .  $inventory->inventoryamt . "</td>";
      
