@@ -7,16 +7,16 @@ $current = "home";
 include(SHARED_PATH . '/public_header.php');
 
 $inventory = Inventory::find_all();
-foreach($inventory as $invent) {$inventoryamt = $invent->inventoryamt;}
+foreach($inventory as $inventory) {$inventoryamt = $inventory->inventoryamt;}
 
-$invoice = Invoice::find_all();
-foreach($invoice as $inv) {$invoiceTotal = $inv->amt;}
+//$invoice = Invoice::find_all();
+//foreach($invoice as $inv) {$invoiceTotal = $inv->amt;}
 
-$cogs = Cogs::find_all();
-foreach($cogs as $cog) {$cogsTotal = $cog->amount;}
+//$cogs = Cogs::find_all();
+//foreach($cogs as $cog) {$cogsTotal = $cog->amount;}
 
-$leftToSpend = $cogsTotal - $invoiceTotal;
-$overSpent = $invoiceTotal - $cogsTotal;
+//$leftToSpend = $cogsTotal - $invoiceTotal;
+//$overSpent = $invoiceTotal - $cogsTotal;
 
  ?>
 
